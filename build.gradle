@@ -27,7 +27,7 @@ minecraft {
 }
 jar {
     manifest {
-        attributes 'FMLAT': 'regressments_at.cfg'
+        attributes 'FMLAT': 'advancementtweaker_at.cfg'
     }
 }
 repositories {
@@ -55,4 +55,6 @@ processResources {
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
+    
+    rename '(.+_at.cfg)', 'META-INF/$1'
 }
